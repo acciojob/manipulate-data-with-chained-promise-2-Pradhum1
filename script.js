@@ -3,7 +3,7 @@ function getNumbersArray() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve([1, 2, 3, 4]);  // The initial array
-        }, 3000);  // Resolve after 3 seconds
+        }, 4000);  // Resolve after 3 seconds
     });
 }
 
