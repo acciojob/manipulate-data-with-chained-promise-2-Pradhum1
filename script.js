@@ -35,25 +35,15 @@ function updateOutput(text) {
 // Chaining the promises
 getNumbersArray()
     .then((numbers) => {
-        // Log initial array for reference
-        console.log("Initial array:", numbers);
-        // First promise chain - filter out odd numbers
         return filterOddNumbers(numbers);
     })
     .then((evenNumbers) => {
-        // Update the DOM with the filtered even numbers
         updateOutput(`Even numbers: ${evenNumbers.join(', ')}`);
-        console.log("Even numbers:", evenNumbers);
-        // Second promise chain - multiply even numbers by 2
         return multiplyEvenNumbers(evenNumbers);
     })
     .then((multipliedNumbers) => {
-        // Update the DOM with the multiplied numbers
         updateOutput(`Multiplied numbers: ${multipliedNumbers.join(', ')}`);
-        console.log("Multiplied numbers:", multipliedNumbers);
     })
     .catch((error) => {
         console.error("An error occurred:", error);
     });
-
-
