@@ -3,7 +3,7 @@ function getNumbersArray() {
     return new Promise((resolve) => {
         setTimeout(() => {
             resolve([1, 2, 3, 4]);  // The initial array
-        }, 4000);  // Resolve after 3 seconds
+        }, 3000);  // Resolve after 3 seconds
     });
 }
 
@@ -23,7 +23,7 @@ function multiplyEvenNumbers(array) {
         setTimeout(() => {
             const multipliedNumbers = array.map(num => num * 2);
             resolve(multipliedNumbers);
-        }, 2000);  // Resolve after 2 seconds
+        }, 3000);  // Resolve after 2 seconds
     });
 }
 
